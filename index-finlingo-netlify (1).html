@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINLINGO | Sitio Oficial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fin-blue': '#2D5CFE',
+                        'fin-purple': '#8E44FF',
+                        'fin-pink': '#E040FB',
+                        'fin-dark': '#1A2B6D',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,800;1,800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; color: #1A2B6D; scroll-behavior: smooth; }
+        h1, h2, h3, h4, span, p, button, li, div { font-style: italic; font-weight: 800; }
+        .brand-text-gradient { background: linear-gradient(135deg, #2D5CFE, #8E44FF, #E040FB); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mini-isotipo { width: 50px; height: 50px; border-radius: 50%; padding: 3px; background: linear-gradient(135deg, #2D5CFE, #E040FB); display: flex; align-items: center; justify-content: center; }
+        .mini-isotipo-inner { background: white; width: 100%; height: 100%; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .glass-card { background: white; border-radius: 3rem; border: 1px solid #F1F5F9; box-shadow: 0 20px 60px rgba(26, 43, 109, 0.05); transition: all 0.3s ease; }
+        .course-detail { display: none; animation: fadeInDown 0.4s ease-out; }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: all 0.7s ease; }
+        .img-container:hover img { filter: grayscale(0%); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-8 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <div class="mini-isotipo">
+                <div class="mini-isotipo-inner"><i class="fa-solid fa-comments-dollar brand-text-gradient text-xl"></i></div>
+            </div>
+            <div>
+                <h2 class="text-fin-dark text-xl tracking-tighter uppercase leading-none italic">Finlingo</h2>
+                <p class="brand-text-gradient text-[8px] tracking-[0.3em] uppercase italic leading-none">Aprende el idioma del dinero</p>
+            </div>
+        </div>
+        <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-widest italic font-black">
+            <a href="#inicio" class="hover:text-fin-blue transition-colors">Inicio</a>
+            <a href="#fundadora" class="hover:text-fin-purple transition-colors">Fundadora</a>
+            <a href="#cursos" class="hover:text-fin-dark transition-colors">Cursos</a>
+            <a href="#registro" class="hover:text-fin-pink transition-colors">Inscripción</a>
+        </div>
+    </nav>
+
+    <header id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div class="inline-block bg-fin-dark text-white px-6 py-2 rounded-full text-[10px] uppercase tracking-[0.4em] mb-8 italic">
+            FINLINGO recién está empezando
+        </div>
+        <h1 class="text-6xl md:text-9xl text-fin-dark uppercase tracking-tighter leading-none italic mb-8">
+            EL IDIOMA <br><span class="brand-text-gradient">DEL DINERO</span>
+        </h1>
+        <p class="text-slate-500 text-xl max-w-3xl mx-auto italic leading-relaxed mb-12">
+            Educación financiera y emprendimiento para niños, adolescentes y adultos con un enfoque cercano, humano y accesible.
+        </p>
+        <a href="#cursos" class="bg-fin-dark text-white px-12 py-5 rounded-full uppercase text-sm italic tracking-widest hover:scale-105 transition-transform shadow-2xl">
+            Ver Rutas de Aprendizaje
+        </a>
+    </header>
+
+    <section id="fundadora" class="py-24 bg-slate-50 px-8">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+            <div class="img-container relative aspect-[4/5] bg-fin-dark rounded-[4rem] overflow-hidden shadow-2xl">
+                <img src="marilu-martinez.jpg" alt="Marilú Martínez - Fundadora de FINLINGO">
+                <div class="absolute inset-0 bg-gradient-to-t from-fin-dark/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-10 left-10 text-white">
+                    <h3 class="text-4xl uppercase tracking-tighter italic">Marilú Martínez</h3>
+                    <p class="text-fin-pink uppercase text-xs tracking-widest mt-2">Fundadora & Ingeniera Empresarial</p>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <h2 class="text-5xl uppercase tracking-tighter italic text-fin-dark leading-tight">HISTORIA CON <br><span class="brand-text-gradient">PROPÓSITO</span></h2>
+                <div class="italic text-slate-600 space-y-6 text-lg leading-relaxed text-justify">
+                    <p>Hola, soy Marilú Martínez y hoy quiero compartir una historia que nace desde la gratitud, pero sobre todo desde un propósito. Hace algunos años, era una joven con grandes sueños y recursos limitados.</p>
+                    <p>Gracias a una oportunidad que marcó mi vida —<b>Beca 18</b>— pude estudiar, formarme y convertirme en ingeniera empresarial. Esa oportunidad me dejó una pregunta: <b>¿cómo retribuirle a mi país todo lo que me dió?</b></p>
+                    <p>Hoy, con FINLINGO, enseñamos el idioma del dinero desde la claridad y la confianza. Porque cuando el conocimiento llega a tiempo, puede cambiar historias.</p>
+                </div>
+                <div class="p-8 bg-white rounded-[3rem] border border-slate-100 shadow-sm italic text-fin-dark text-xl leading-snug">
+                    "Creo firmemente que la educación financiera no debe ser un privilegio, sino una oportunidad al alcance de todos."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cursos" class="py-24 px-8">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-5xl text-fin-dark uppercase italic tracking-tighter mb-4">Nuestros <span class="brand-text-gradient">Programas</span></h2>
+            <p class="text-slate-500 italic">Especializados para niños, adolescentes y adultos.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="space-y-4">
+                <button onclick="toggleDetails('digital')" class="w-full glass-card p-8 text-left hover:border-fin-pink group">
+                    <i class="fa-solid fa-user-shield text-3xl text-fin-pink mb-4"></i>
+                    <h3 class="text-xl uppercase italic text-fin-dark">Ciudadanía Digital</h3>
+                    <p class="text-[9px] text-slate-400 uppercase tracking-widest mt-2">Seguridad • Privacidad</p>
+                </button>
+                <div id="digital" class="course-detail space-y-3">
+                    <div class="p-6 bg-slate-50 rounded-[2rem] border border-fin-pink/20 italic">
+                        <h4 class="text-sm uppercase text-fin-pink mb-1">Ruta 01 (4 Sesiones)</h4>
+                        <p class="text-xs text-slate-500">Fundamentos de seguridad y navegación responsable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <button onclick="toggleDetails('finanzas')" class="w-full glass-card p-8 text-left hover:border-fin-blue group">
+                    <i class="fa-solid fa-piggy-bank text-3xl text-fin-blue mb-4"></i>
+                    <h3 class="text-xl uppercase italic text-fin-dark">Finanzas</h3>
+                    <p class="text-[9px] text-slate-400 uppercase tracking-widest mt-2">Niños • Adolescentes • Adultos</p>
+                </button>
+                <div id="finanzas" class="course-detail space-y-3">
+                    <div class="p-6 bg-fin-blue text-white rounded-[2rem] italic shadow-lg">
+                        <h4 class="text-sm uppercase text-white mb-2 underline decoration-fin-pink decoration-2">Mini Taller (30 min)</h4>
+                        <ul class="text-[11px] space-y-2 opacity-95">
+                            <li><i class="fa-solid fa-check-circle text-fin-pink mr-1"></i> Mentalidad: ¿Qué es el dinero?</li>
+                            <li><i class="fa-solid fa-check-circle text-fin-pink mr-1"></i> El Triángulo: Ahorro, Gasto y Propósito.</li>
+                            <li><i class="fa-solid fa-check-circle text-fin-pink mr-1"></i> Identificación de Gastos Hormiga.</li>
+                            <li><i class="fa-solid fa-check-circle text-fin-pink mr-1"></i> Tu primera meta financiera.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-[2rem] border border-fin-blue/20 italic">
+                        <h4 class="text-sm uppercase text-fin-blue mb-1">Ruta 01 (4 Sesiones)</h4>
+                        <p class="text-xs text-slate-500">Ahorro inteligente y presupuesto personal.</p>
+                    </div>
+                    <div class="p-6 bg-fin-dark text-white rounded-[2rem] italic">
+                        <h4 class="text-sm uppercase text-fin-pink mb-1">Ruta 02 (8 Sesiones)</h4>
+                        <p class="text-xs opacity-70">Mentalidad, control e introducción a las inversiones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <button onclick="toggleDetails('emprende')" class="w-full glass-card p-8 text-left hover:border-fin-purple group">
+                    <i class="fa-solid fa-rocket text-3xl text-fin-purple mb-4"></i>
+                    <h3 class="text-xl uppercase italic text-fin-dark">Emprendimiento</h3>
+                    <p class="text-[9px] text-slate-400 uppercase tracking-widest mt-2">Niños • Adolescentes • Adultos</p>
+                </button>
+                <div id="emprende" class="course-detail space-y-3">
+                    <div class="p-6 bg-slate-50 rounded-[2rem] border border-fin-purple/20 italic">
+                        <h4 class="text-sm uppercase text-fin-purple mb-1">Ruta 01 (4 Sesiones)</h4>
+                        <p class="text-xs text-slate-500">De la idea al concepto y validación rápida.</p>
+                    </div>
+                    <div class="p-6 bg-fin-dark text-white rounded-[2rem] italic">
+                        <h4 class="text-sm uppercase text-fin-pink mb-1">Ruta 02 (8 Sesiones)</h4>
+                        <p class="text-xs opacity-70">Marketing digital, finanzas pro y pitch.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <button onclick="toggleDetails('tributaria')" class="w-full glass-card p-8 text-left hover:border-slate-400 group border-dashed border-2">
+                    <i class="fa-solid fa-landmark text-3xl text-slate-400 mb-4"></i>
+                    <h3 class="text-xl uppercase italic text-slate-500">Cultura Tributaria</h3>
+                    <p class="text-[9px] text-slate-400 uppercase tracking-widest mt-2">En Desarrollo</p>
+                </button>
+                <div id="tributaria" class="course-detail space-y-3">
+                    <div class="p-6 bg-slate-100 rounded-[2rem] border border-slate-200 italic">
+                        <h4 class="text-sm uppercase text-fin-dark mb-1">Formación Ciudadana</h4>
+                        <p class="text-xs text-slate-500">Comprendiendo el rol social de los tributos para el desarrollo del país.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- REGISTRO DE INTERESADOS -->
+    <section id="registro" class="py-24 px-8 bg-slate-50">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+                <span class="inline-block bg-fin-dark text-white px-5 py-2 rounded-full text-[10px] uppercase tracking-[0.3em] mb-6">
+                    Da el siguiente paso
+                </span>
+                <h2 class="text-5xl md:text-6xl text-fin-dark uppercase tracking-tighter leading-tight mb-6">
+                    QUIERO <span class="brand-text-gradient">INFORMACIÓN</span>
+                </h2>
+                <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                    Déjanos tus datos y cuéntanos qué programa te interesa. Te contactaremos para compartirte
+                    fechas, modalidad, inversión y próximos pasos.
+                </p>
+
+                <div class="space-y-4 text-sm text-slate-600">
+                    <div class="flex gap-3 items-start">
+                        <i class="fa-solid fa-circle-check text-fin-blue mt-1"></i>
+                        <span>Recibe información sobre cursos, talleres y rutas de aprendizaje.</span>
+                    </div>
+                    <div class="flex gap-3 items-start">
+                        <i class="fa-solid fa-circle-check text-fin-purple mt-1"></i>
+                        <span>Puedes solicitar la actualización o eliminación de tus datos conforme a la normativa aplicable.</span>
+                    </div>
+                    <div class="flex gap-3 items-start">
+                        <i class="fa-solid fa-shield-halved text-fin-pink mt-1"></i>
+                        <span>Tus datos serán utilizados para gestionar tu solicitud y brindarte información relacionada con FINLINGO.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[3rem] p-8 md:p-10 shadow-xl border border-slate-100">
+                <!--
+                    Netlify Forms:
+                    1. Este formulario puede procesarse directamente por Netlify.
+                    2. Activa "Forms" en el panel de Netlify si fuera necesario.
+                    3. El atributo data-netlify="true" permite el reconocimiento del formulario.
+                    4. Honeypot anti-spam incluido.
+                -->
+                <form
+                    name="registro-finlingo"
+                    method="POST"
+                    action="/gracias.html"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    class="space-y-5"
+                    id="leadForm"
+                >
+                    <input type="hidden" name="form-name" value="registro-finlingo">
+
+                    <p class="hidden">
+                        <label>No llenar: <input name="bot-field"></label>
+                    </p>
+
+                    <div>
+                        <label for="nombre" class="block text-xs uppercase tracking-widest text-fin-dark mb-2">Nombres y apellidos *</label>
+                        <input id="nombre" name="nombre" type="text" required autocomplete="name"
+                            class="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-fin-blue focus:ring-2 focus:ring-fin-blue/10"
+                            placeholder="Tu nombre completo">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-5">
+                        <div>
+                            <label for="email" class="block text-xs uppercase tracking-widest text-fin-dark mb-2">Correo electrónico *</label>
+                            <input id="email" name="email" type="email" required autocomplete="email"
+                                class="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-fin-blue focus:ring-2 focus:ring-fin-blue/10"
+                                placeholder="nombre@correo.com">
+                        </div>
+                        <div>
+                            <label for="telefono" class="block text-xs uppercase tracking-widest text-fin-dark mb-2">Celular *</label>
+                            <input id="telefono" name="telefono" type="tel" required autocomplete="tel"
+                                class="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-fin-blue focus:ring-2 focus:ring-fin-blue/10"
+                                placeholder="+51 999 999 999">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="programa" class="block text-xs uppercase tracking-widest text-fin-dark mb-2">Programa de interés *</label>
+                        <select id="programa" name="programa" required
+                            class="w-full rounded-2xl border border-slate-200 px-5 py-4 bg-white outline-none focus:border-fin-blue focus:ring-2 focus:ring-fin-blue/10">
+                            <option value="">Selecciona una opción</option>
+                            <option value="Ciudadanía Digital">Ciudadanía Digital</option>
+                            <option value="Finanzas">Finanzas</option>
+                            <option value="Emprendimiento">Emprendimiento</option>
+                            <option value="Cultura Tributaria">Cultura Tributaria</option>
+                            <option value="Otro / Quiero conocer más">Otro / Quiero conocer más</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="perfil" class="block text-xs uppercase tracking-widest text-fin-dark mb-2">¿Para quién es el programa? *</label>
+                        <select id="perfil" name="perfil" required
+                            class="w-full rounded-2xl border border-slate-200 px-5 py-4 bg-white outline-none focus:border-fin-blue focus:ring-2 focus:ring-fin-blue/10">
+                            <option value="">Selecciona una opción</option>
+                            <option value="Niño o niña">Niño o niña</option>
+                            <option value="Adolescente">Adolescente</option>
+                            <option value="Adulto">Adulto</option>
+                            <option value="Empresa / institución">Empresa / institución</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mensaje" class="block text-xs uppercase tracking-widest text-fin-dark mb-2">Mensaje (opcional)</label>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                            class="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none focus:border-fin-blue focus:ring-2 focus:ring-fin-blue/10"
+                            placeholder="Cuéntanos qué información necesitas..."></textarea>
+                    </div>
+
+                    <div class="space-y-3 text-xs text-slate-600 leading-relaxed">
+                        <label class="flex gap-3 items-start">
+                            <input type="checkbox" name="aceptacion_datos" value="Acepto política de tratamiento de datos" required class="mt-1 accent-blue-600">
+                            <span>
+                                He leído y acepto la
+                                <a href="#politica-datos" class="text-fin-blue underline font-bold">Política de Tratamiento de Datos Personales</a>
+                                y autorizo el tratamiento de mis datos para gestionar esta solicitud. *
+                            </span>
+                        </label>
+
+                        <label class="flex gap-3 items-start">
+                            <input type="checkbox" name="comunicaciones_comerciales" value="Sí" class="mt-1 accent-blue-600">
+                            <span>
+                                Deseo recibir información comercial, novedades, cursos y actividades de FINLINGO.
+                                (Opcional)
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-fin-dark text-white px-8 py-5 rounded-2xl uppercase text-xs tracking-widest hover:scale-[1.01] transition-transform shadow-lg">
+                        Enviar solicitud <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+
+                    <p class="text-[10px] text-slate-400 text-center leading-relaxed">
+                        Los campos marcados con * son obligatorios. Evita enviar información sensible que no sea necesaria para tu solicitud.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLÍTICA DE TRATAMIENTO DE DATOS -->
+    <section id="politica-datos" class="py-24 px-8 bg-white border-t border-slate-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-fin-blue text-xs uppercase tracking-[0.3em]">Privacidad y transparencia</span>
+                <h2 class="text-4xl md:text-5xl text-fin-dark uppercase tracking-tighter mt-3">
+                    Política de Tratamiento de <span class="brand-text-gradient">Datos Personales</span>
+                </h2>
+                <p class="text-slate-500 mt-4 text-sm">Última actualización: septiembre de 2026</p>
+            </div>
+
+            <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed text-sm md:text-base space-y-7">
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">1. Responsable del tratamiento</h3>
+                    <p>
+                        FINLINGO es responsable de gestionar los datos personales que recopila a través de este sitio web.
+                        Antes de publicar esta política de forma definitiva, completa aquí la razón social o nombre completo
+                        del responsable, RUC/DNI cuando corresponda, domicilio y correo de contacto para asuntos de privacidad.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">2. Datos que podemos recopilar</h3>
+                    <p>
+                        Dependiendo de la interacción, podemos recopilar nombres y apellidos, correo electrónico, número de
+                        celular, programa de interés, perfil del participante y la información que voluntariamente incluyas
+                        en el campo de mensaje.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">3. Finalidades</h3>
+                    <p>
+                        Los datos enviados mediante el formulario se utilizarán para atender solicitudes de información,
+                        gestionar el contacto con personas interesadas, coordinar información sobre programas y cursos y,
+                        cuando exista autorización para ello, enviar comunicaciones comerciales y novedades.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">4. Base y consentimiento</h3>
+                    <p>
+                        El envío del formulario requiere aceptar la política de tratamiento de datos. La casilla de
+                        comunicaciones comerciales es independiente y opcional. El consentimiento debe ser libre, informado,
+                        previo y verificable en los casos en que sea requerido por la normativa aplicable.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">5. Conservación y seguridad</h3>
+                    <p>
+                        FINLINGO procurará conservar los datos durante el tiempo necesario para cumplir las finalidades
+                        informadas y aplicará medidas razonables de seguridad para protegerlos frente a accesos, alteraciones,
+                        pérdidas o usos no autorizados.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">6. Derechos del titular</h3>
+                    <p>
+                        Puedes solicitar información sobre el tratamiento de tus datos y ejercer los derechos que reconozca
+                        la legislación aplicable, incluyendo acceso, rectificación, cancelación/supresión, oposición u otros
+                        derechos que correspondan. Para ello, utiliza el canal de privacidad indicado por FINLINGO.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">7. Menores de edad</h3>
+                    <p>
+                        Algunos programas están dirigidos a niños y adolescentes. Cuando el registro involucre a un menor,
+                        la persona adulta responsable deberá realizar la inscripción y proporcionar únicamente los datos
+                        necesarios. No solicites información sensible de menores mediante este formulario.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">8. Proveedores y servicios tecnológicos</h3>
+                    <p>
+                        El sitio puede utilizar proveedores tecnológicos para alojamiento, formularios, analítica u otros
+                        servicios necesarios para su funcionamiento. Antes de publicar la versión definitiva, identifica los
+                        proveedores que efectivamente utilizarás y revisa sus condiciones de privacidad y tratamiento de datos.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-fin-dark text-xl uppercase">9. Contacto de privacidad</h3>
+                    <p>
+                        Para consultas o solicitudes relacionadas con datos personales: <strong>completa aquí el correo oficial de privacidad de FINLINGO</strong>.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                    <p class="text-xs text-slate-500">
+                        <strong>Importante:</strong> este texto es una base para la página web y debe ser revisado y adaptado
+                        a la situación jurídica real de FINLINGO, especialmente si opera en Perú, si registra menores de edad,
+                        si realiza campañas comerciales o si comparte datos con terceros.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉRMINOS Y AVISO LEGAL -->
+    <section id="terminos" class="py-20 px-8 bg-slate-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl text-fin-dark uppercase tracking-tight mb-6">Términos y condiciones de uso</h2>
+            <div class="text-sm text-slate-600 leading-relaxed space-y-4">
+                <p>El contenido de este sitio tiene fines informativos sobre los programas y actividades de FINLINGO.</p>
+                <p>La información de cursos, horarios, modalidades, precios, cupos y fechas puede cambiar y debe confirmarse
+                    directamente con FINLINGO antes de realizar una inscripción o pago.</p>
+                <p>El contenido educativo no constituye asesoría financiera, tributaria, legal ni de inversión personalizada.</p>
+                <p>Para consultas sobre el servicio, pagos, cancelaciones o condiciones particulares de un programa,
+                    utiliza los canales oficiales de contacto de FINLINGO.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-8 text-center bg-fin-dark text-white relative overflow-hidden">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-7xl uppercase italic tracking-tighter mb-8 leading-tight">SUMA TU <br><span class="brand-text-gradient">VOCACIÓN</span></h2>
+            <p class="text-xl italic opacity-80 mb-12 leading-relaxed">
+                FINLINGO está abierto al feedback, a la colaboración y a voluntarios que quieran aportar desde su experiencia. Invertir en educación financiera es invertir en un país con más oportunidades.
+            </p>
+            <a href="https://www.facebook.com/finlingoaprendeelidiomadeldinero" class="inline-block bg-white text-fin-dark px-12 py-5 rounded-full uppercase italic text-sm tracking-widest font-black hover:scale-105 transition-transform shadow-2xl">
+                Conversemos
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-16 px-8 border-t border-slate-100 text-center bg-white">
+        <div class="flex flex-col items-center gap-6">
+            <div class="mini-isotipo">
+                <div class="mini-isotipo-inner"><i class="fa-solid fa-comments-dollar brand-text-gradient text-xl"></i></div>
+            </div>
+            
+            <a href="https://www.facebook.com/finlingoaprendeelidiomadeldinero" target="_blank" class="flex items-center gap-2 text-fin-blue hover:text-fin-dark transition-colors italic font-black uppercase text-xs tracking-widest">
+                <i class="fa-brands fa-facebook text-2xl"></i>
+                Seguir en Facebook
+            </a>
+
+            <div class="flex flex-wrap justify-center gap-5 text-[10px] uppercase tracking-widest text-slate-500">
+                <a href="#registro" class="hover:text-fin-blue">Solicitar información</a>
+                <a href="#politica-datos" class="hover:text-fin-blue">Política de datos</a>
+                <a href="#terminos" class="hover:text-fin-blue">Términos y condiciones</a>
+            </div>
+
+            <div class="space-y-2">
+                <p class="text-fin-dark text-sm italic uppercase tracking-widest">FINLINGO – Aprende el idioma del dinero</p>
+                <p class="text-[10px] uppercase tracking-[0.5em] opacity-40 italic font-black">¡FINLINGO recién está empezando!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const el = document.getElementById(id);
+            const isVisible = el.style.display === 'block';
+            document.querySelectorAll('.course-detail').forEach(d => d.style.display = 'none');
+            el.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+
+    <script>
+        // Evita enviar el formulario sin la aceptación obligatoria.
+        document.getElementById('leadForm')?.addEventListener('submit', function (event) {
+            const consentimiento = this.querySelector('[name="aceptacion_datos"]');
+            if (!consentimiento.checked) {
+                event.preventDefault();
+                alert('Debes aceptar la Política de Tratamiento de Datos Personales para enviar tu solicitud.');
+                consentimiento.focus();
+            }
+        });
+    </script>
+</body>
+</html>
